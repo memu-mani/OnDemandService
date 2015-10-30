@@ -98,6 +98,7 @@ namespace VerizonRepairService
         {
             try
             {
+                
                 List<Customer> customer = new List<Customer>();
 
 
@@ -117,6 +118,34 @@ namespace VerizonRepairService
             {
                 return "No Service at availabe";
             }
+        }
+
+        public string GetAvialbleMessages(string id)
+        {
+            
+                  try
+            {
+                List<Message> Messages = new List<Message>();
+
+
+                Messages.Add(new Message { ReuqestId = "PA093495733", RequestDateTime= DateTime.Now.AddDays(-1).ToShortDateString(), details="You have requested for equipment repair", TechnicianLat = "33.846553", TechnicianLang = "-84.35886"});
+                Messages.Add(new Message { ReuqestId = "PA111111111", RequestDateTime = DateTime.Now.AddDays(-1).ToShortDateString(), details = "You have requested for Internet repair", TechnicianLat = "33.848553", TechnicianLang = "-84.35486" });
+
+
+                DataContractJsonSerializer serializer = new DataContractJsonSerializer(Messages.GetType());
+                MemoryStream memoryStream = new MemoryStream();
+                serializer.WriteObject(memoryStream, Messages);
+
+
+                string json = Encoding.Default.GetString(memoryStream.ToArray());
+                return json;
+
+            }
+            catch (Exception ex)
+            {
+                return "No Service at availabe";
+            }
+
         }
     }
 }

@@ -39,7 +39,15 @@ namespace VerizonRepairService
         [OperationContract]
         string GetCustomerLocation();
 
-        
+
+        [WebInvoke(Method = "GET",
+              BodyStyle = WebMessageBodyStyle.WrappedRequest,
+              RequestFormat = WebMessageFormat.Json,
+              ResponseFormat = WebMessageFormat.Json,
+              UriTemplate = "GetAvialbleMessages/{id}")]
+        [OperationContract]
+        string GetAvialbleMessages(string id);
+
     }
 
 
@@ -68,6 +76,22 @@ namespace VerizonRepairService
         public string Lat;
         [DataMember]
         public string ServiceType;
+
+    }
+
+    [DataContract]
+    public class Message
+    {
+        [DataMember]
+        public string ReuqestId;
+        [DataMember]
+        public string RequestDateTime;
+        [DataMember]
+        public string details;
+        [DataMember]
+        public string TechnicianLang;
+        [DataMember]
+        public string TechnicianLat;
 
     }
 
