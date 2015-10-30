@@ -18,9 +18,9 @@ namespace VerizonRepairService
                BodyStyle = WebMessageBodyStyle.WrappedRequest,
                RequestFormat = WebMessageFormat.Json,
                ResponseFormat = WebMessageFormat.Json,
-               UriTemplate = "GetRepairTechnician/{0}")]
+               UriTemplate = "GetRepairTechnician")]
         [OperationContract]
-        string GetRepairTechnician(string problemType);
+        string GetRepairTechnician();
 
         [WebInvoke(Method = "GET",
               BodyStyle = WebMessageBodyStyle.WrappedRequest,

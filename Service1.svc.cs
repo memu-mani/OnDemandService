@@ -32,7 +32,7 @@ namespace VerizonRepairService
         //        }
         //        return composite;
         //    }
-        public string GetRepairTechnician(string problemType)
+        public string GetRepairTechnician()
         {
             try
             {
