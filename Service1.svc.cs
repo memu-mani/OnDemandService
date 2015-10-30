@@ -32,15 +32,29 @@ namespace VerizonRepairService
         //        }
         //        return composite;
         //    }
-        public string GetRepairTechnician()
+        public string GetRepairTechnician(string type)
         {
             try
             {
                 List<Technician> technicianList = new List<Technician>();
 
-                technicianList.Add(new Technician { Name = "Technician 1", Lat = "33.84659", Lang = "-84.35686", skill = "equipment service" });
-                technicianList.Add(new Technician { Name = "Technician 2", Lat = "33.846553", Lang = "-84.35886", skill = "equipment service" });
-                technicianList.Add(new Technician { Name = "Technician 3", Lat = "33.846653", Lang = "-84.366125", skill = "equipment service" });
+                if (type == "internet")
+                {
+                    technicianList.Add(new Technician { Name = "Technician 1", Lat = "33.84659", Lang = "-84.35686", skill = "equipment service" });
+                    technicianList.Add(new Technician { Name = "Technician 2", Lat = "33.846553", Lang = "-84.35886", skill = "equipment service" });
+                    technicianList.Add(new Technician { Name = "Technician 3", Lat = "33.846653", Lang = "-84.366125", skill = "equipment service" });
+                }
+
+                else if (type == "equipment")
+                {
+                    technicianList.Add(new Technician { Name = "Technician 1", Lat = "33.84659", Lang = "-84.35686", skill = "equipment service" });                    
+                    technicianList.Add(new Technician { Name = "Technician 3", Lat = "33.846653", Lang = "-84.366125", skill = "equipment service" });
+                }
+                else if (type == "voice")
+                {
+                    technicianList.Add(new Technician { Name = "Technician 1", Lat = "33.84659", Lang = "-84.35686", skill = "equipment service" });
+                    technicianList.Add(new Technician { Name = "Technician 3", Lat = "33.846653", Lang = "-84.366125", skill = "equipment service" });
+                }
 
                 DataContractJsonSerializer serializer = new DataContractJsonSerializer(technicianList.GetType());
                 MemoryStream memoryStream = new MemoryStream();
