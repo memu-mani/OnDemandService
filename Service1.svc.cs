@@ -82,7 +82,7 @@ namespace VerizonRepairService
             {
                 List<Technician> technicianList = new List<Technician>();
 
-                technicianList.Add(new Technician { Name = "Technician 1", Lat = "80.24434500000010", Lang = "12.971105", skill = "Fios Agent" });
+                technicianList.Add(new Technician { Name = "Technician 1", Lat = "80.24434500000010", Lang = "12.97105", skill = "Fios Agent" });
                 technicianList.Add(new Technician { Name = "Technician 2", Lat = "80.24434500000546", Lang = "12.971105", skill = "Fios Agent" });
 
                 DataContractJsonSerializer serializer = new DataContractJsonSerializer(technicianList.GetType());
