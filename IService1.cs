@@ -39,6 +39,22 @@ namespace VerizonRepairService
         [OperationContract]
         string GetCustomerLocation();
 
+        [WebInvoke(Method = "GET",
+            BodyStyle = WebMessageBodyStyle.WrappedRequest,
+            RequestFormat = WebMessageFormat.Json,
+            ResponseFormat = WebMessageFormat.Json,
+            UriTemplate = "SetCustomerLocation/{location}")]
+        [OperationContract]
+        void SetCustomerLocation(string location);
+
+        [WebInvoke(Method = "GET",
+             BodyStyle = WebMessageBodyStyle.WrappedRequest,
+             RequestFormat = WebMessageFormat.Json,
+             ResponseFormat = WebMessageFormat.Json,
+             UriTemplate = "GetTechLocation")]
+        [OperationContract]
+        string GetTechLocation();
+
 
         [WebInvoke(Method = "GET",
               BodyStyle = WebMessageBodyStyle.WrappedRequest,
@@ -47,6 +63,14 @@ namespace VerizonRepairService
               UriTemplate = "GetAvialbleMessages/{id}")]
         [OperationContract]
         string GetAvialbleMessages(string id);
+
+        [WebInvoke(Method = "GET",
+             BodyStyle = WebMessageBodyStyle.WrappedRequest,
+             RequestFormat = WebMessageFormat.Json,
+             ResponseFormat = WebMessageFormat.Json,
+             UriTemplate = "UpdateAppointment/{date}")]
+        [OperationContract]
+        string UpdateAppointment(string date);
 
     }
 
