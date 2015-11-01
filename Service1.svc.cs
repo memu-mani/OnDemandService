@@ -38,22 +38,30 @@ namespace VerizonRepairService
             {
                 List<Technician> technicianList = new List<Technician>();
 
-                if (type == "internet")
+                if (type == "repairPhone")
                 {
-                    technicianList.Add(new Technician { Name = "Technician 1", Lat = "33.84659", Lang = "-84.35686", skill = "equipment service" });
-                    technicianList.Add(new Technician { Name = "Technician 2", Lat = "33.846553", Lang = "-84.35886", skill = "equipment service" });
-                    technicianList.Add(new Technician { Name = "Technician 3", Lat = "33.846653", Lang = "-84.366125", skill = "equipment service" });
+                    technicianList.Add(new Technician { Name = "Technician 1", Lat = "33.846543", Lang = "-84.35884", skill = "equipment service" });
+                    technicianList.Add(new Technician { Name = "Technician 2", Lat = "33.846553", Lang = "-84.35887", skill = "equipment service" });
+                    technicianList.Add(new Technician { Name = "Technician 3", Lat = "33.846553", Lang = "-84.35888", skill = "equipment service" });
                 }
 
-                else if (type == "equipment")
+                else if (type == "repairTv")
                 {
-                    technicianList.Add(new Technician { Name = "Technician 1", Lat = "33.84659", Lang = "-84.35686", skill = "equipment service" });                    
-                    technicianList.Add(new Technician { Name = "Technician 3", Lat = "33.846653", Lang = "-84.366125", skill = "equipment service" });
+                    technicianList.Add(new Technician { Name = "Technician 1", Lat = "32.84659", Lang = "-83.35686", skill = "equipment service" });
+                    technicianList.Add(new Technician { Name = "Technician 2", Lat = "31.846553", Lang = "-84.35886", skill = "equipment service" });
+                    technicianList.Add(new Technician { Name = "Technician 3", Lat = "30.846653", Lang = "-83.366125", skill = "equipment service" });
                 }
-                else if (type == "voice")
+                else if (type == "repairSpeed")
                 {
-                    technicianList.Add(new Technician { Name = "Technician 1", Lat = "33.84659", Lang = "-84.35686", skill = "equipment service" });
-                    technicianList.Add(new Technician { Name = "Technician 3", Lat = "33.846653", Lang = "-84.366125", skill = "equipment service" });
+                    technicianList.Add(new Technician { Name = "Technician 1", Lat = "32.84659", Lang = "-83.35686", skill = "equipment service" });
+                    technicianList.Add(new Technician { Name = "Technician 2", Lat = "31.846553", Lang = "-84.35886", skill = "equipment service" });
+                    technicianList.Add(new Technician { Name = "Technician 3", Lat = "30.846653", Lang = "-83.366125", skill = "equipment service" });
+                }
+                else if (type == "repairRouter")
+                {
+                    technicianList.Add(new Technician { Name = "Technician 1", Lat = "32.84659", Lang = "-83.35686", skill = "equipment service" });
+                    technicianList.Add(new Technician { Name = "Technician 2", Lat = "31.846553", Lang = "-84.35886", skill = "equipment service" });
+                    technicianList.Add(new Technician { Name = "Technician 3", Lat = "30.846653", Lang = "-83.366125", skill = "equipment service" });
                 }
 
                 DataContractJsonSerializer serializer = new DataContractJsonSerializer(technicianList.GetType());
@@ -69,15 +77,15 @@ namespace VerizonRepairService
                 return "No Technician availabe";
             }                     
         }
-        public string GetInstallTechnician()
+        public string GetNewFiosAgent()
         {
             try
             {
                 List<Technician> technicianList = new List<Technician>();
 
-                //technicianList.Add(new Technician { Name = "Technician 1", Lat = "33.84659", Lang = "-84.35686", skill = "equipment service" });
-                technicianList.Add(new Technician { Name = "Technician 2", Lat = "33.846553", Lang = "-84.35886", skill = "equipment service" });
-              //  technicianList.Add(new Technician { Name = "Technician 3", Lat = "33.846653", Lang = "-84.366125", skill = "equipment service" });
+                technicianList.Add(new Technician { Name = "Technician 1", Lat = "33.84659", Lang = "-84.35680", skill = "Fios Agent" });
+                technicianList.Add(new Technician { Name = "Technician 2", Lat = "33.84659", Lang = "-84.35886", skill = "Fios Agent" });
+                technicianList.Add(new Technician { Name = "Technician 3", Lat = "33.84659", Lang = "-84.35889", skill = "Fios Agent" });
 
                 DataContractJsonSerializer serializer = new DataContractJsonSerializer(technicianList.GetType());
                 MemoryStream memoryStream = new MemoryStream();
@@ -90,7 +98,7 @@ namespace VerizonRepairService
             }
             catch (Exception ex)
             {
-                return "No Technician availabe";
+                return "No Agent availabe";
             }
         }
 
@@ -102,7 +110,7 @@ namespace VerizonRepairService
                 List<Customer> customer = new List<Customer>();
 
 
-                customer.Add(new Customer { Name = "Your location", Lat = "33.846553", Lang = "-84.35886", ServiceType = "TV - DATA -FDV" });
+                customer.Add(new Customer { Name = "Home", Lat = "33.846553", Lang = "-84.35886", ServiceType = "TV - DATA -FDV" });
             
 
                 DataContractJsonSerializer serializer = new DataContractJsonSerializer(customer.GetType());
