@@ -41,21 +41,21 @@ namespace VerizonRepairService
 
                 if (type == "repairPhone")
                 {
-                    technicianList.Add(new Technician { Name = "Technician 1", Lat = "80.24434500000006", Lang = "12.971105", skill = "equipment service" });
+                    technicianList.Add(new Technician { Name = "Technician 1", Lat = "80.2443450001235", Lang = "12.89887", skill = "equipment service" });
                     technicianList.Add(new Technician { Name = "Technician 1", Lat = "80.24433510000005", Lang = "12.981106", skill = "equipment service" });
-                    technicianList.Add(new Technician { Name = "Technician 1", Lat = "80.24432520000006", Lang = "12.975006", skill = "equipment service" });
+                    technicianList.Add(new Technician { Name = "Technician 1", Lat = "80.24562520000006", Lang = "12.975006", skill = "equipment service" });
                 }
 
                 else if (type == "repairTv")
                 {
-                    technicianList.Add(new Technician { Name = "Technician 1", Lat = "80.24434500000006", Lang = "12.971105", skill = "equipment service" });
-                    technicianList.Add(new Technician { Name = "Technician 1", Lat = "80.24433510000005", Lang = "12.981106", skill = "equipment service" });
+                    technicianList.Add(new Technician { Name = "Technician 1", Lat = "80.45545500000006", Lang = "12.1234", skill = "equipment service" });
+                    technicianList.Add(new Technician { Name = "Technician 1", Lat = "80.24987351000005", Lang = "12.981106", skill = "equipment service" });
                 }
                 else if (type == "repairSpeed")
                 {
-                    technicianList.Add(new Technician { Name = "Technician 1", Lat = "80.24434500000006", Lang = "12.972105", skill = "equipment service" });
-                    technicianList.Add(new Technician { Name = "Technician 1", Lat = "80.24433500000006", Lang = "12.971105", skill = "equipment service" });
-                    technicianList.Add(new Technician { Name = "Technician 1", Lat = "80.24432500045606", Lang = "12.974105", skill = "equipment service" });
+                    technicianList.Add(new Technician { Name = "Technician 1", Lat = "80.504564", Lang = "12.72105", skill = "equipment service" });
+                    technicianList.Add(new Technician { Name = "Technician 1", Lat = "80.248498654654", Lang = "12.845", skill = "equipment service" });
+                    technicianList.Add(new Technician { Name = "Technician 1", Lat = "80.325656555606", Lang = "11.974105", skill = "equipment service" });
                 }
                 else if (type == "repairRouter")
                 {
@@ -82,7 +82,7 @@ namespace VerizonRepairService
             {
                 List<Technician> technicianList = new List<Technician>();
 
-                technicianList.Add(new Technician { Name = "Technician 1", Lat = "80.24434500000010", Lang = "12.97105", skill = "Fios Agent" });
+                technicianList.Add(new Technician { Name = "Technician 1", Lat = "80.24434500777010", Lang = "12.9705", skill = "Fios Agent" });
                 technicianList.Add(new Technician { Name = "Technician 2", Lat = "80.24434500000546", Lang = "12.971105", skill = "Fios Agent" });
 
                 DataContractJsonSerializer serializer = new DataContractJsonSerializer(technicianList.GetType());
