@@ -53,9 +53,9 @@ namespace VerizonRepairService
                 }
                 else if (type == "repairSpeed")
                 {
-                    technicianList.Add(new Technician { Name = "Technician 1", Lat = "80.504564", Lang = "12.72105", skill = "equipment service" });
-                    technicianList.Add(new Technician { Name = "Technician 1", Lat = "80.248498654654", Lang = "12.845", skill = "equipment service" });
-                    technicianList.Add(new Technician { Name = "Technician 1", Lat = "80.325656555606", Lang = "11.974105", skill = "equipment service" });
+                    technicianList.Add(new Technician { Name = "Technician 1", Lat = "80.5045643245", Lang = "12.86575324", skill = "equipment service" });
+                    technicianList.Add(new Technician { Name = "Technician 1", Lat = "80.8954454654", Lang = "12.77845", skill = "equipment service" });
+                    technicianList.Add(new Technician { Name = "Technician 1", Lat = "80.9956955606", Lang = "12.974105", skill = "equipment service" });
                 }
                 else if (type == "repairRouter")
                 {
